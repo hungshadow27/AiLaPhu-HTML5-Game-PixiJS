@@ -3,7 +3,7 @@ import i18n from '../../config/i18n';
 import { Windows } from '../../config/windows';
 import { ViewController } from '../../controllers/ViewController';
 import { game } from '../../Game';
-import { GameScreen } from '../../screens/GameScreen';
+//import { GameScreen } from '../../screens/GameScreen';
 import { Button } from '../basic/Button';
 import { Window } from '../basic/Window';
 import { LoadingScreen } from '../../screens/LoadingScreen';
@@ -32,31 +32,31 @@ export class PauseWindow extends Window {
 
     /** Create content of the component. Automatically called by extended class (see  Window.ts). */
     override createContent() {
-        const levelsButton = new Button( // create a levels window navigational button
-            i18n.titleScreen.menu.items.levels, // button text
-            () => this.views.show(Windows.levels), // callback: show the levels window on click
-        );
+        // const levelsButton = new Button( // create a levels window navigational button
+        //     i18n.titleScreen.menu.items.levels, // button text
+        //     () => this.views.show(Windows.levels), // callback: show the levels window on click
+        // );
 
-        const replayButton = new Button( // create a replay button
-            i18n.titleScreen.menu.items.replay, // button text
-            () => {
-                // callback: restart the game on click
-                game.showScreen(GameScreen, {
-                    // show the game screen
-                    restart: true, // give the game screen a restart flag
-                });
-            },
-        );
+        // const replayButton = new Button( // create a replay button
+        //     i18n.titleScreen.menu.items.replay, // button text
+        //     () => {
+        //         // callback: restart the game on click
+        //         game.showScreen(GameScreen, {
+        //             // show the game screen
+        //             restart: true, // give the game screen a restart flag
+        //         });
+        //     },
+        // );
 
-        const settingsButton = new Button( // create a settings window navigational button
-            i18n.titleScreen.menu.items.settings, // button text
-            () => this.views.show(Windows.settings), // callback: show the settings window on click
-        );
+        // const settingsButton = new Button( // create a settings window navigational button
+        //     i18n.titleScreen.menu.items.settings, // button text
+        //     () => this.views.show(Windows.settings), // callback: show the settings window on click
+        // );
 
-        const loginButton = new Button( // create an exit button
-            i18n.titleScreen.menu.items.login, // button text
-            () => this.views.show(Windows.login), // callback: show the settings window on click
-        );
+        // const loginButton = new Button( // create an exit button
+        //     i18n.titleScreen.menu.items.login, // button text
+        //     () => this.views.show(Windows.login), // callback: show the settings window on click
+        // );
         const playButton = new Button('Bắt Đầu', () => {
             game.showScreen(LoadingScreen);
         });
