@@ -1336,18 +1336,18 @@ export class GameScreen extends AppScreen {
         gsap.fromTo(panel.scale, { x: 0.85, y: 0.85 }, { x: 1, y: 1, duration: 0.4, ease: 'back.out(1.7)' });
     }
 
-    private _restartGame() {
-        this._questionIndex = 0;
-        this._lifelineUsed = [false, false, false];
-        this._state = GameState.IDLE;
-        this.overlay.visible = false;
-        this.popupContainer.visible = false;
+    // private _restartGame() {
+    //     this._questionIndex = 0;
+    //     this._lifelineUsed = [false, false, false];
+    //     this._state = GameState.IDLE;
+    //     this.overlay.visible = false;
+    //     this.popupContainer.visible = false;
 
-        // Re-enable lifelines
-        this.lifelines.forEach(ll => ll.reset());
+    //     // Re-enable lifelines
+    //     this.lifelines.forEach(ll => ll.reset());
 
-        this._loadQuestion();
-    }
+    //     this._loadQuestion();
+    // }
 
     /* ──────────── Resize ──────────── */
     public resize(w: number, h: number) {
